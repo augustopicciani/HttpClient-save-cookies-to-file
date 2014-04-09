@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.httpclient_save_cookies.Main$PlaceholderFragment" >
+
+    <TextView
+        android:id="@+id/status_connection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:layout_below="@+id/intro"
+        android:layout_alignLeft="@+id/status_save"
+        android:layout_alignRight="@+id/btnstart"
+        android:layout_marginTop="20dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:gravity="left"
+        android:textColor="#008000" />
+
+    <TextView
+        android:id="@+id/status_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/btnstart"
+        android:layout_below="@+id/status_connection"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#3d2570" />
+
+    <TextView
+        android:id="@+id/status_read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/status_save"
+        android:layout_alignRight="@+id/status_save"
+        android:layout_below="@+id/status_save"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#3d2570" />
+
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/status_connection"
+        android:layout_alignParentTop="true"
+        android:background="#fff2cc"
+        android:text="@string/intro"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/btnstart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Start" />
+
+</RelativeLayout>
