@@ -212,7 +212,8 @@ public class Main extends Activity {
 			handler.sendEmptyMessage(SUCCESSFULLY_WRITE);
 
 		}
-
+		
+		
 		public void getCookieFromfile() {
 			// Be sure to clear all cookies before retrieving from file
 			cookieStore.clear();
@@ -225,6 +226,11 @@ public class Main extends Activity {
 			protected void onPreExecute() {
 				super.onPreExecute();
 				status_connection.setText(LABEL_CONNECTING);
+				/*
+				 * In this example I'm going to delete the file cookies.txt at every connection
+				 * because don't need to do other stuff
+				 */
+				helper.deleteFile();
 			}
 
 			@Override

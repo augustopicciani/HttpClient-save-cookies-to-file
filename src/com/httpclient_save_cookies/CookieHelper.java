@@ -93,7 +93,7 @@ public class CookieHelper {
 		try {
 
 			BufferedWriter writer = new BufferedWriter(new FileWriter(file,
-					false));
+					true));
 			writer.write(name);
 			writer.write(SEPARATOR);
 			writer.write(value);
@@ -222,6 +222,15 @@ public class CookieHelper {
 		}
 
 		return dateExpired;
+	}
+	
+	public void deleteFile(){
+		File dirPath = new File(filePath);
+		File nameFile = new File(fileName);
+		File file = new File(dirPath + File.separator + nameFile);
+			if(file.exists()){
+				file.delete();
+			}
 	}
 
 }
