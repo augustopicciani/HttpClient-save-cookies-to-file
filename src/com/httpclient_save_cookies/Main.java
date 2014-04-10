@@ -2,9 +2,11 @@ package com.httpclient_save_cookies;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.HttpGet;
@@ -14,6 +16,7 @@ import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.HttpParams;
 import org.apache.http.protocol.BasicHttpContext;
+import org.apache.http.util.EntityUtils;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -180,6 +183,7 @@ public class Main extends Activity {
 
 			try {
 				response = httpclient.execute(httpget, localContext);
+				EntityUtils.toString(response.getEntity());
 				if (response.getStatusLine().getStatusCode() == 200) {
 					handler.sendEmptyMessage(SUCCESSFULLY_CONNECTION);
 				} else {

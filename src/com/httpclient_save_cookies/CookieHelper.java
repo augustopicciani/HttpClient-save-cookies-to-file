@@ -63,6 +63,10 @@ public class CookieHelper {
 		 */
 
 		Log.d(TAG, "write cookie to file....");
+		File foldercheck=new File(filePath);
+			if(!foldercheck.exists()){
+				foldercheck.mkdir();
+			}
 		String SEPARATOR = "#";
 		String name = cookie.getName();
 		String value = "*";
