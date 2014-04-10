@@ -2,7 +2,6 @@ HttpClient save cookies to file
 ===============================
 
 This is an example of how to save cookies permanently on text file and how to retrieve those. 
-It will help you when you want to obtain a Sessionid for any web site login procedure when cookie management is crucial
 
 The core of the example is CookieHelper class that you can reuse in your projects.
 
